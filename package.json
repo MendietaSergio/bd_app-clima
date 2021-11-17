@@ -2,9 +2,10 @@
   "name": "bd-app-clima",
   "version": "0.0.0",
   "private": true,
+  "main":"app.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
