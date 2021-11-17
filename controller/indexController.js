@@ -2,7 +2,7 @@ const ListWeather = require('../models/listWeather');
 
 exports.home = async (req,res) =>{
     try{
-        res.render('Index', {
+        res.render('index', {
             title:'Home'
         })
     } catch(error){
