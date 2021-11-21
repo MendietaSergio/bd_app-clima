@@ -65,6 +65,7 @@ exports.update = async(req,res) =>{
     }
 }
 exports.delete = async (req, res) =>{
+    console.log("delete");
     try{
         await ListWeather.findByIdAndDelete({_id:req.params.id})
         res.json({
