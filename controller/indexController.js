@@ -1,5 +1,5 @@
 const ListWeather = require('../models/listWeather');
-
+const listTeam = require('../models/team')
 exports.home = async (req,res) =>{
     try{
         res.render('index', {
@@ -15,6 +15,20 @@ exports.add = async(req,res,next) =>{
     const listWeather = new ListWeather(req.body)
     try{
         await listWeather.save()
+        res.json({
+            message:"Ciudad agregada!"
+        })
+    } catch(error){
+        console.log(error);
+        res.send(error);
+        next()
+    }
+}
+exports.addTeam = async(req,res,next) =>{
+    console.log("rq.bosy ", req.body);
+    const listTeam = new listTeam(req.body)
+    try{
+        await listTeam.save()
         res.json({
             message:"Ciudad agregada!"
         })
@@ -50,6 +64,17 @@ exports.list = async(req,res) =>{
         next()
     }
 }
+exports.listTeam = async(req,res) =>{
+    console.log("lista => ");
+    try{
+        const listTeam = await listTeam.find({})
+        res.json(listTeam)
+    } catch(error) {
+        console.log(error);
+        res.send(error);
+        next()
+    }
+}
 exports.update = async(req,res) =>{
     try{
         const weather = ListWeather.findOneAndUpdate({
@@ -65,6 +90,7 @@ exports.update = async(req,res) =>{
     }
 }
 exports.delete = async (req, res) =>{
+    console.log("delete");
     try{
         await ListWeather.findByIdAndDelete({_id:req.params.id})
         res.json({
