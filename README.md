@@ -1,4 +1,4 @@
-# Base de datos ClimAPP
+# Base de datos [ClimAPP](https://github.com/MendietaSergio/App-Clima-IBM-CAC)
 
 [![N|Solid](https://nodejs.org/static/images/logo.svg)](https://nodejs.org/es/)
 
@@ -15,7 +15,6 @@ Tecnologias implementadas:
 * Clonar repositorio de GitHub
 * Instalar dependencias:
 
-    * NodeJs
     ```bsh
         npm install /
     ```
@@ -40,11 +39,13 @@ Tecnologias implementadas:
         nodemon
     ```
 
- #  -- Rutas --   
- [IR](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/)
+ #  -- Rutas --
+ 
+ 
+   [IR](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/)
 
- * [/](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/)
- * /listWeather   [GET](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/listWeather)
- * /listWeather   (POST)
- * /detailWeather [GET](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/detailWeather)
- * /delete/:id    (DELETE)
+   * [/](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/)
+   * /listWeather   [GET](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/listWeather)
+   * /listWeather   (POST)
+   * /detailWeather [GET](https://bd-app-clima-j6vn1h7fk-mendietasergio.vercel.app/detailWeather)
+   * /delete/:id    (DELETE)
